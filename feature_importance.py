@@ -97,7 +97,7 @@ rfe = RFE(Ir,20)
 model = rfe.fit(X,y)
 
 RFE_features = pd.DataFrame(list(zip(X.columns,model.ranking_)), columns = ['predictor','ranking']).sort_values(by='ranking', ascending = True)
-
+RFE_features.head(30)
 ##### LASSSO
 
 from sklearn.preprocessing import StandardScaler
@@ -112,14 +112,14 @@ model = Lasso(alpha=0.01, positive=True)
 model.fit(X_std, y)
 
 LASSO_featues = pd.DataFrame(list(zip(X.columns,model.coef_)), columns = ['predictor','coefficient']).sort_values(by='coefficient', ascending = False)
-
+LASSO_featues.head(30)
 ##### RANDOM FOREST
 
 X = df_FI.iloc[:,13:171]
 y = df_FI["Severity"]
 
-from sklearn.ensemble import RandomForestRegressor
-randomforest = RandomForestRegressor(random_state=0)
+from sklearn.ensemble import RandomForestClassifier
+randomforest = RandomForestClassifier(random_state=0)
 
 model = randomforest.fit(X,y)
 
@@ -130,3 +130,9 @@ for feature_list_index in sfm.get_support(indices=True):
     print(X.columns[feature_list_index])
     
 RF_features = pd.DataFrame(list(zip(X.columns,model.feature_importances_)), columns = ['predictor','Gini coefficient']).sort_values(by='Gini coefficient', ascending = False)
+RF_features.head(30)
+
+
+
+
+
