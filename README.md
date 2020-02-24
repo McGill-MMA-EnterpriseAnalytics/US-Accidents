@@ -2,11 +2,11 @@
 
 Context & Objectives:
 
-The number of accidents are increasing taking away lives more every year. The objectives is to explore the undelying reasons behind accidents and predict both the severity and the accidents' duration to better deploy the resources available 
+The number of accidents is increasing taking away lives more every year. The objectives are to explore the underlying reasons behind accidents and predict both the severity and the accidents' duration to better deploy the resources available 
 
 I. Data Preprocessing and Visualization
 
-The initial dataset contained around 3 millions observations. A sample of 500000 was taken and processed. The missing values were replaced by the median and then the finalized dataset was used for the analysis
+The initial dataset contained around 3 million observations. A sample of 500000 was taken and processed. The missing values were replaced by the median and then the finalized dataset was used for the analysis
 
 The visual insights can be found in the notebook for a better understanding of the dataset.
 
@@ -22,11 +22,11 @@ Due to the large number of features in the dataset, three different methods are 
 
 IV. Classification & Regression
 
-Developing a model that classifies the severity of accidents and predicts the duration the accidents is going to takes can be critical in order to help the concerned authorities better manage traffic when an accidents occur and anticipate the needed ressources to deal efficiently with accidents
+Developing a model that classifies the severity of accidents and predicts the duration the accidents is going to takes can be critical in order to help the concerned authorities better manage traffic when an accident occur and anticipate the needed resources to deal efficiently with accidents
 
     1. Classification
       
-      Four machine learning algorithms are trained and the accuracy is used to measure the performance
+      Four machine learning algorithms are trained, and the accuracy is used to measure the performance
         Logistic Regression: 66.99%
         KNN: 66.04%
         Random Forest: 69.03%
